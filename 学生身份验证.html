@@ -1,0 +1,118 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <link rel="stylesheet" href="css/amazeui.min.css">
+  <link rel="stylesheet" href="css/wap.css">
+  <title>学生身份验证</title>
+</head>
+<body style="background:#ececec">
+  <div class="pet_mian" >
+    <div class="pet_head">
+      <header data-am-widget="header"
+          class="am-header am-header-default pet_head_block">
+        <div class="am-header-left am-header-nav ">
+          <a href="#left-link" class="iconfont pet_head_jt_ico">&#xe601;</a>
+        </div>
+<div class="pet_news_list_tag_name">学生身份验证</div>
+        <div class="am-header-right am-header-nav">
+          <a href="javascript:;" class="iconfont pet_head_gd_ico">&#xe600;</a>
+        </div>
+      </header>
+    </div>
+
+
+    <div class="pet_content pet_content_list">
+        <div class="pet_grzx">
+            <div>
+                <form class="am-form">
+                    <fieldset>
+                        <legend></legend>
+                        <div class="am-form-group">
+                            <label for="jiaowu_school">所在学校</label>
+                            <input type="text" class="" id="jiaowu_school" placeholder="输入您的所在学校">
+                        </div>
+                        <div class="am-form-group">
+                            <label for="jiaowu_name">姓名</label>
+                            <input type="text" class="" id="jiaowu_name" placeholder="输入您的姓名">
+                        </div>
+
+                        <div class="am-form-group">
+                            <label for="jiaowu_number">学号</label>
+                            <input type="text" class="" id="jiaowu_number" placeholder="输入您的学号">
+                        </div>
+
+                        <div class="am-form-group">
+                            <label for="jiaowu_passwd">密码</label>
+                            <input type="password" class="" id="jiaowu_passwd" placeholder="输入您的教务密码">
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+            <div style="margin-left: 5%;margin-right: 5%">
+                注:密码指(教务管理系统)密码,
+                我们获取密码仅作验证使用,
+                不会进行保存与泄露
+            </div>
+
+            <div style="text-align:center;margin-left:auto; margin-right:auto;">
+                <div class="am-u-sm-6">
+                    <button type="button" class="am-btn am-btn-success">确定</button>
+                </div>
+                <div class="am-u-sm-6">
+                    <button type="button" class="am-btn am-btn-danger">取消</button>
+                </div>
+            </div>
+
+
+            <div class="pet_article_dowload">
+                <div class="pet_article_dowload_content"><div class="pet_article_dowload_triangle"></div>
+                    <div class="pet_article_dowload_ico"><img src="img/footdon.png" alt=""></div>
+                    <div class="pet_article_dowload_content_font">关于关于</div>
+                </div>
+            </div>
+
+        </div>
+            <div class="pet_article_footer_info">Copyright(c)2016 XiaoRui All Rights Reserved</div>
+     </div>
+  </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/amazeui.min.js"></script>
+    <script>
+$(function(){
+
+    // 动态计算新闻列表文字样式
+    auto_resize();
+    $(window).resize(function() {
+        auto_resize();
+    });
+    $('.am-list-thumb img').load(function(){
+        auto_resize();
+    });
+    $('.pet_article_like li:last-child').css('border','none');
+        function auto_resize(){
+        $('.pet_list_one_nr').height($('.pet_list_one_img').height());
+                // alert($('.pet_list_one_nr').height());
+    }
+        $('.pet_article_user').on('click',function(){
+            if($('.pet_article_user_info_tab').hasClass('pet_article_user_info_tab_show')){
+                $('.pet_article_user_info_tab').removeClass('pet_article_user_info_tab_show').addClass('pet_article_user_info_tab_cloes');
+            }else{
+                $('.pet_article_user_info_tab').removeClass('pet_article_user_info_tab_cloes').addClass('pet_article_user_info_tab_show');
+            }
+        });
+
+        $('.pet_head_gd_ico').on('click',function(){
+            $('.pet_more_list').addClass('pet_more_list_show');
+       });
+        $('.pet_more_close').on('click',function(){
+            $('.pet_more_list').removeClass('pet_more_list_show');
+        });
+});
+
+</script>
+</body>
+</html>
